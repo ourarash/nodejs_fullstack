@@ -33,4 +33,4 @@ node app.js
 
 Then open your browser to http://localhost:3000:
 
-<img alt="Frontend" src="https://raw.githubusercontent.com/ourarash/isometric_cubes/master/2014-05-10-11.31.36.jpg" width="400">
+<img alt="Frontend" src="https://github.com/ourarash/nodejs_fullstack/blob/master/frontend/screenshot.png?raw=true" width="400">
