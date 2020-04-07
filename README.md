@@ -2,7 +2,7 @@
 
 A full stack project starter code for NodeJS.
 
-<img alt="Diagram" src="https://github.com/ourarash/nodejs_fullstack/blob/master/diagram.png?raw=true" width="400">
+<img alt="Diagram" src="https://github.com/ourarash/nodejs_fullstack/blob/master/diagram.png?raw=true" width="400" text-align="center">
 
 - The frontend is a simple web page that takes to numbers: `min_value` and `max_value` and sends it to the backend using HTTP GET request.
 - The backend is a simple NodeJS server that processes the HTTP GET request, reads the parameters `min_value` and `max_value` and generates a random value between these two numbers and returns the result back to the frontend.
