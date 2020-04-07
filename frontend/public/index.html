@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link href="style.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Random Generator</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <div
+        id="loginbox"
+        style="margin-top:50px;"
+        class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"
+      >
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">
+              I'm a true random generator!
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <span>Select the min and max values.</span>
+
+              <div>
+                <input
+                  type="number"
+                  name="min_value"
+                  id="min_value"
+                  placeholder="min value"
+                />
+                <input
+                  type="number"
+                  name="max_value"
+                  id="max_value"
+                  placeholder="max value"
+                />
+              </div>
+            </div>
+            <div class="text-center padding-y-sm btn-lg btn-block">
+              <input
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Generate!"
+                class="btn btn-primary mt-8"
+                onclick="submit()"
+              />
+            </div>
+
+            <div class="text-center padding-y-sm btn-lg btn-block">
+              <span class="loader text-center" id="loader"></span>
+
+              <!-- show random value here -->
+              <span id="random-value"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
+</html>

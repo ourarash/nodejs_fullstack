@@ -1,0 +1,29 @@
+{
+  "name": "nodejs_fullstack",
+  "version": "1.0.0",
+  "description": "A full stack project starter code for NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ourarash/nodejs_fullstack.git"
+  },
+  "keywords": [
+    "nodejs",
+    "fullstack",
+    "frontend",
+    "backend"
+  ],
+  "author": "Ari Saif",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ourarash/nodejs_fullstack/issues"
+  },
+  "homepage": "https://github.com/ourarash/nodejs_fullstack#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
