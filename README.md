@@ -29,7 +29,9 @@ node app.js
 ```
 
 You can test backend by installing and running [Postman](https://www.postman.com/downloads/):
+
 <img alt="Frontend" src="https://github.com/ourarash/nodejs_fullstack/blob/master/backend/screenshot.png?raw=true" width="400">
+
 
 ## Running Backend:
 ```bash
