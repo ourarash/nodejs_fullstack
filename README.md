@@ -24,9 +24,9 @@ cd nodejs_fullstack
 npm install
 ```
 
-## Running Frontend:
+## Running Backend:
 ```bash
-cd frontend
+cd backend
 node app.js
 ```
 
@@ -35,9 +35,9 @@ You can test backend by installing and running [Postman](https://www.postman.com
 <img alt="Backend" src="https://github.com/ourarash/nodejs_fullstack/blob/master/backend/screenshot.png?raw=true" width="400">
 
 
-## Running Backend:
+## Running Frontend:
 ```bash
-cd backend
+cd frontend
 node app.js
 ```
 
