@@ -5,6 +5,9 @@ A full stack project starter code for NodeJS.
 - The frontend is a simple web page that takes to numbers: `min_value` and `max_value` and sends it to the backend using HTTP GET request.
 - The backend is a simple NodeJS server that processes the HTTP GET request, reads the parameters `min_value` and `max_value` and generates a random value between these two numbers and returns the result back to the frontend.
 
+
+By default frontend listens on port 3000, and backend listens on port 5000.
+
 # Install NodeJS
 
 You can install NodeJs from [here](https://nodejs.org/en/download/)
@@ -24,6 +27,9 @@ npm install
 cd frontend
 node app.js
 ```
+
+You can test backend by installing and running [Postman](https://www.postman.com/downloads/):
+<img alt="Frontend" src="https://github.com/ourarash/nodejs_fullstack/blob/master/backend/screenshot.png?raw=true" width="400">
 
 ## Running Backend:
 ```bash
