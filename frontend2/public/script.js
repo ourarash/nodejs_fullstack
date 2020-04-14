@@ -3,8 +3,8 @@
  */
 function initialize() {
   // Initialize min and max values
-  document.getElementById("min_value").value = "0";
-  document.getElementById("max_value").value = "100";
+  // document.getElementById("min_value").value = "0";
+  // document.getElementById("max_value").value = "100";
 
   // Hide the loader in the beginning
   let loader = document.getElementById("loader");
@@ -23,6 +23,7 @@ document.getElementById("submit").onclick = function () {
 /**
  * An async function to send the request to the backend.
  */
+let side = 0; //0: head, 1: tail
 async function submit() {
   console.log("In submit!");
 
@@ -40,8 +41,8 @@ async function submit() {
 
   try {
     // Get the min/max values from the user
-    let min_value = document.getElementById("min_value").value;
-    let max_value = document.getElementById("max_value").value;
+    let min_value = 0;
+    let max_value = 100;
 
     // Address of your backend
     let request = `http://127.0.0.1:5000/?min_value=${min_value}&max_value=${max_value}`;
@@ -53,8 +54,14 @@ async function submit() {
     console.log("data.data: ", JSON.stringify(data.data, null, 2));
 
     // Display the random value
-    random_value_element.innerHTML =
-      "Here is your random number: " + data.data.randomValue;
+    console.log("data.data.randomValue: ", data.data.randomValue);
+    if (data.data.randomValue < 50) {
+      side = 0;
+    } else {
+      side = 1;
+    }
+
+    random_value_element.innerHTML = "It is: " + (side === 0 ? "head" : "tail");
   } catch (error) {
     console.log("error: ", error);
   }

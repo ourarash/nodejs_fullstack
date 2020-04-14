@@ -38,7 +38,7 @@
               <span>Select the min and max values.</span>
 
               <div>
-                <input
+                <!-- <input
                   type="number"
                   name="min_value"
                   id="min_value"
@@ -49,27 +49,35 @@
                   name="max_value"
                   id="max_value"
                   placeholder="max value"
-                />
+                /> -->
               </div>
             </div>
             <div class="text-center padding-y-sm btn-lg btn-block">
-              <input
+              <!-- <input
                 type="submit"
                 name="submit"
                 id="submit"
                 value="Generate!"
                 class="btn btn-primary mt-8"
                 onclick="submit()"
-              />
+              /> -->
+              <div onclick="submit()">
+                <div id="coin-side-a">
+                  <img src="coin_side_a.jpg" class="coin" />
+                </div>
+
+                <div id="coin-side-b">
+                  <img src="coin_side_b.jpg" class="coin" / >
+                </div>
+              </div>
             </div>
 
             <div class="text-center padding-y-sm btn-lg btn-block">
-              
               <!-- Spinning wheel  -->
-              <span class="loader text-center" id="loader">  </span>
+              <span class="loader text-center" id="loader"> </span>
 
               <!-- ** show random value here. We modify the text in this span through javascript! ** -->
-              <span id="random-value">  </span>
+              <span id="random-value"> </span>
             </div>
           </div>
         </div>
