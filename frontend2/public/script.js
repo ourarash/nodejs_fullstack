@@ -1,3 +1,5 @@
+let side = 0; //0: head, 1: tail
+
 /**
  * Set the initial values of min_value and max_value
  */
@@ -5,6 +7,9 @@ function initialize() {
   // Initialize min and max values
   // document.getElementById("min_value").value = "0";
   // document.getElementById("max_value").value = "100";
+
+  document.getElementById("coin-side-a").style.display = "block";
+  document.getElementById("coin-side-b").style.display = "none";
 
   // Hide the loader in the beginning
   let loader = document.getElementById("loader");
@@ -23,7 +28,6 @@ document.getElementById("submit").onclick = function () {
 /**
  * An async function to send the request to the backend.
  */
-let side = 0; //0: head, 1: tail
 async function submit() {
   console.log("In submit!");
 
