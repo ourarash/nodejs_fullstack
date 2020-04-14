@@ -18,12 +18,16 @@ function initialize() {
 
 initialize();
 
-/**
- * Handle the click event on Submit (Generate) button
- */
-document.getElementById("submit").onclick = function () {
-  submit();
-};
+function coinFlip() {
+  if (side % 2) {
+    document.getElementById("coin-side-a").style.display = "block";
+    document.getElementById("coin-side-b").style.display = "none";
+  } else {
+    document.getElementById("coin-side-a").style.display = "none";
+    document.getElementById("coin-side-b").style.display = "block";
+  }
+  side++;
+}
 
 /**
  * An async function to send the request to the backend.
@@ -33,6 +37,8 @@ async function submit() {
 
   // Set the mouse cursor to hourglass
   document.body.style.cursor = "wait";
+
+  let coinFlipInterval = setInterval(coinFlip, 100);
 
   // Accessing the div that has random value
   let random_value_element = document.getElementById("random-value");
@@ -66,10 +72,15 @@ async function submit() {
     }
 
     random_value_element.innerHTML = "It is: " + (side === 0 ? "head" : "tail");
+
+    
   } catch (error) {
     console.log("error: ", error);
   }
 
+  // Stop the animation
+  clearInterval(coinFlipInterval);
+  
   // Set the cursor back to default
   document.body.style.cursor = "default";
 
