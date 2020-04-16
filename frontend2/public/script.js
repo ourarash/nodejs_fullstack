@@ -65,22 +65,23 @@ async function submit() {
 
     // Display the random value
     console.log("data.data.randomValue: ", data.data.randomValue);
+    // let mySide;
     if (data.data.randomValue < 50) {
-      side = 0;
+      document.getElementById("coin-side-a").style.display = "block";
+      document.getElementById("coin-side-b").style.display = "none";
     } else {
-      side = 1;
+      document.getElementById("coin-side-a").style.display = "none";
+      document.getElementById("coin-side-b").style.display = "block";
     }
 
-    random_value_element.innerHTML = "It is: " + (side === 0 ? "head" : "tail");
-
-    
+    // random_value_element.innerHTML = "It is: " + (side === 0 ? "head" : "tail");
   } catch (error) {
     console.log("error: ", error);
   }
 
   // Stop the animation
   clearInterval(coinFlipInterval);
-  
+
   // Set the cursor back to default
   document.body.style.cursor = "default";
 

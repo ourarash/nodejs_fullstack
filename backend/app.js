@@ -11,11 +11,10 @@ app.use(cors());
 
 let port = 5000;
 
-
 /**
  * Generates a random integer number between min and max
- * @param {Number} min 
- * @param {Number} max 
+ * @param {Number} min
+ * @param {Number} max
  */
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -23,32 +22,35 @@ function generateRandomNumber(min, max) {
 
 /**
  * A promise that resolves after t ms.
- * @param {Number} t 
+ * @param {Number} t
  */
-const delay = function(t) {
-  return new Promise(resolve => setTimeout(resolve, t));
+const delay = function (t) {
+  return new Promise((resolve) => setTimeout(resolve, t));
 };
-
 
 /**
  * The default path
  */
-app.get("/", async function(req, res) {
+app.get("/", async function (req, res) {
   if (req.query && Object.keys(req.query).length > 0) {
     console.log("I got a query!");
     handleGet(res, res, req.query);
   }
 });
 
-app.listen(port, err => {
+
+app.listen(port, (err) => {
   console.log(`Listening on port: ${port}`);
 });
 //-----------------------------------------------------------------------------
+
+
+
 /**
  * Handles a Get request
- * @param {Object} req 
- * @param {Object} res 
- * @param {Object} query 
+ * @param {Object} req
+ * @param {Object} res
+ * @param {Object} query
  */
 async function handleGet(req, res, query) {
   let error = "NO_ERROR";
@@ -74,12 +76,14 @@ async function handleGet(req, res, query) {
     error = "ERROR: min_value or max_value not provided";
   }
 
+  counter++;
   // Generate the output
   let output = {
     randomValue: randomValue,
     min_value: min_value,
     max_value: max_value,
-    error: error
+    error: error,
+    counter: counter,
   };
 
   // Convert output to JSON
